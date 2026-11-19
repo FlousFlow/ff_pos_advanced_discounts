@@ -2,19 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>POS Advanced Discounts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POS Advanced Discounts | Odoo 20</title>
 </head>
 <body>
     <h1>POS Advanced Discounts</h1>
-    <p>Controlled percentage and fixed-amount discounts for Odoo 20 Point of Sale.</p>
-    <h2>Features</h2>
+    <p>Controlled percentage and fixed-amount discounts for Odoo 20 Community Point of Sale.</p>
+
+    <h2>What this module does</h2>
+    <p>
+        POS Advanced Discounts adds a controlled discount workflow while keeping
+        Odoo's native POS order, tax, rounding, invoicing, refund, and session
+        accounting flows.
+    </p>
+
+    <h2>Key features</h2>
     <ul>
-        <li>Apply a percentage or fixed discount to a selected order line.</li>
-        <li>Apply a percentage or fixed discount to the eligible POS order.</li>
-        <li>Configure per-POS percentage and fixed-amount limits.</li>
-        <li>Keep tax, rounding, invoicing, refunds, and session accounting on Odoo's native engines.</li>
+        <li>Apply one percentage or fixed-amount discount to the selected order line.</li>
+        <li>Apply one percentage or fixed-amount discount to the eligible POS order.</li>
+        <li>Configure a maximum percentage and optional maximum fixed amount per POS.</li>
+        <li>Recalculate fixed line discounts safely when quantity changes.</li>
+        <li>Keep discount values through offline storage, synchronization, refunds, and receipts.</li>
+        <li>Validate discount limits server-side before the order is finalized.</li>
     </ul>
+
+    <h2>How to configure</h2>
+    <ol>
+        <li>Install Point of Sale and POS Discount, then install this module.</li>
+        <li>Open Point of Sale &gt; Configuration &gt; Settings.</li>
+        <li>Enable Advanced Discounts and set the percentage or fixed-amount limits.</li>
+        <li>Enable Global Discounts and configure a discount product if order-level discounts are required.</li>
+    </ol>
+
+    <h2>How to use</h2>
+    <ol>
+        <li>Select a POS order line and press the native percent control.</li>
+        <li>Choose Percentage or Fixed Amount and enter the value.</li>
+        <li>Use the native Discount control for an order-level discount.</li>
+        <li>Enter zero to remove the active discount.</li>
+    </ol>
+
+    <h2>Arabic</h2>
+    <p dir="rtl">
+        يضيف الموديول خصومات يدوية بالنسبة المئوية أو بالقيمة الثابتة على مستوى
+        السطر أو الطلب، مع حدود قابلة للإعداد لكل نقطة بيع، مع الحفاظ على
+        المعالجة القياسية للضرائب والتقريب والفواتير والمرتجعات وإغلاق الجلسات.
+    </p>
+
     <h2>Compatibility</h2>
-    <p>Odoo 20 Community. Requires Point of Sale and POS Discount.</p>
+    <p>Odoo 20 Community. Requires Point of Sale and POS Discount. Licensed under LGPL-3.</p>
 </body>
 </html>
