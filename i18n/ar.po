@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Flous Flow\n"
+"Language-Team: Arabic\n"
+"PO-Revision-Date: 2026-11-19 00:00+0000\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: ff_pos_advanced_discounts
+msgid "Advanced Discounts"
+msgstr "خصومات متقدمة"
+
+#. module: ff_pos_advanced_discounts
+msgid "Line discount"
+msgstr "خصم السطر"
+
+#. module: ff_pos_advanced_discounts
+msgid "Order discount"
+msgstr "خصم الطلب"
+
+#. module: ff_pos_advanced_discounts
+msgid "Maximum Discount Percentage"
+msgstr "الحد الأقصى لنسبة الخصم"
+
+#. module: ff_pos_advanced_discounts
+msgid "Maximum Discount Amount"
+msgstr "الحد الأقصى لقيمة الخصم"
+
+#. module: ff_pos_advanced_discounts
+msgid "Fixed Amount"
+msgstr "مبلغ ثابت"
+
+#. module: ff_pos_advanced_discounts
+msgid "Percentage"
+msgstr "نسبة مئوية"
+
+#. module: ff_pos_advanced_discounts
+msgid "Invalid discount"
+msgstr "خصم غير صالح"
+
+#. module: ff_pos_advanced_discounts
+msgid "Discount values must be zero or greater."
+msgstr "يجب أن تكون قيم الخصم صفرًا أو أكبر."
+
+#. module: ff_pos_advanced_discounts
+msgid "Advanced discounts disabled"
+msgstr "الخصومات المتقدمة معطلة"
+
+#. module: ff_pos_advanced_discounts
+msgid "Enable Advanced Discounts in the POS configuration first."
+msgstr "فعّل الخصومات المتقدمة أولًا من إعدادات نقطة البيع."
+
+#. module: ff_pos_advanced_discounts
+msgid "Discount limit"
+msgstr "حد الخصم"
+
+#. module: ff_pos_advanced_discounts
+msgid "The discount exceeds the configured percentage limit."
+msgstr "الخصم يتجاوز الحد الأقصى للنسبة المكون في الإعدادات."
+
+#. module: ff_pos_advanced_discounts
+msgid "A fixed line discount cannot exceed the line total."
+msgstr "لا يمكن أن يتجاوز خصم السطر الثابت إجمالي السطر."
+
+#. module: ff_pos_advanced_discounts
+msgid "The discount exceeds the configured amount limit."
+msgstr "الخصم يتجاوز الحد الأقصى للقيمة المكون في الإعدادات."
+
+
+#. module: ff_pos_advanced_discounts
+msgid "An unused advanced discount must have a zero value."
+msgstr "يجب أن تكون قيمة الخصم المتقدم غير المستخدم صفرًا."
+
+#. module: ff_pos_advanced_discounts
+msgid "Discount values cannot be negative."
+msgstr "لا يمكن أن تكون قيم الخصم سالبة."
+
+#. module: ff_pos_advanced_discounts
+msgid "Advanced discounts are disabled for this Point of Sale."
+msgstr "الخصومات المتقدمة معطلة لنقطة البيع هذه."
+
+#. module: ff_pos_advanced_discounts
+msgid "The line discount exceeds the configured percentage limit."
+msgstr "خصم السطر يتجاوز الحد الأقصى للنسبة المكون في الإعدادات."
+
+#. module: ff_pos_advanced_discounts
+msgid "The order discount exceeds the configured percentage limit."
+msgstr "خصم الطلب يتجاوز الحد الأقصى للنسبة المكون في الإعدادات."
+
+#. module: ff_pos_advanced_discounts
+msgid "A fixed order discount cannot exceed the eligible order total."
+msgstr "لا يمكن أن يتجاوز خصم الطلب الثابت إجمالي الطلب المؤهل."

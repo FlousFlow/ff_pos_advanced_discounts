@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="ff_pos_advanced_discounts.Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+        <xpath expr="//li[@t-if=&quot;vals.discount&quot;]" position="replace">
+            <li t-if="vals.discount" class="price-per-unit">
+                <i class="oi pe-1" data-icon="label"/>
+                <t t-if="vals.ffFixedDiscount">
+                    <em><t t-out="vals.ffFixedDiscount"/></em> discount on <t t-out="vals.noDiscountPrice"/>
+                </t>
+                <t t-else="">
+                    <em><t t-out="vals.discount"/>% </em> discount off on <t t-out="vals.noDiscountPrice"/>
+                </t>
+            </li>
+        </xpath>
+    </t>
+</templates>
