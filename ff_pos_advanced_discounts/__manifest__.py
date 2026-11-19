@@ -24,6 +24,7 @@ session accounting to Odoo's existing POS and tax engines.
         "point_of_sale._assets_pos": [
             "ff_pos_advanced_discounts/static/src/app/**/*.js",
             "ff_pos_advanced_discounts/static/src/app/**/*.xml",
+            "ff_pos_advanced_discounts/static/src/app/**/*.scss",
         ],
         "web.assets_tests": [
             "ff_pos_advanced_discounts/static/tests/**/*",

@@ -23,6 +23,18 @@ msgid "Order discount"
 msgstr "خصم الطلب"
 
 #. module: ff_pos_advanced_discounts
+msgid "Choose discount scope"
+msgstr "اختار نطاق الخصم"
+
+#. module: ff_pos_advanced_discounts
+msgid "Discount on selected item"
+msgstr "خصم على البند المحدد"
+
+#. module: ff_pos_advanced_discounts
+msgid "Discount on the whole order"
+msgstr "خصم على الأوردر كله"
+
+#. module: ff_pos_advanced_discounts
 msgid "Maximum Discount Percentage"
 msgstr "الحد الأقصى لنسبة الخصم"
 

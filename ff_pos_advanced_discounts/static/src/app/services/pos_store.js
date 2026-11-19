@@ -1,7 +1,9 @@
 import { patch } from "@web/core/utils/patch";
 import { _t } from "@web/core/l10n/translation";
 import { NumberPopup } from "@point_of_sale/app/components/popups/number_popup/number_popup";
+import { SelectionPopup } from "@point_of_sale/app/components/popups/selection_popup/selection_popup";
 import { AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
+import { makeAwaitable } from "@point_of_sale/app/utils/make_awaitable_dialog";
 import { PosStore } from "@point_of_sale/app/services/pos_store";
 
 const types = [
@@ -10,6 +12,55 @@ const types = [
 ];
 
 patch(PosStore.prototype, {
+    async openAdvancedDiscountScope(line, order = this.getOrder()) {
+        const choices = [{
+            id: "order",
+            label: _t("Discount on the whole order"),
+            isSelected: false,
+            item: "order",
+        }];
+        if (line && !line.isDiscountLine && !line.isServiceFeeLine()) {
+            choices.unshift({
+                id: "line",
+                label: _t("Discount on selected item"),
+                isSelected: false,
+                item: "line",
+            });
+        }
+        const target = await makeAwaitable(this.dialog, SelectionPopup, {
+            title: _t("Choose discount scope"),
+            list: choices,
+        });
+        if (target === "line") {
+            return this.openAdvancedLineDiscountDialog(line);
+        }
+        if (target === "order") {
+            return this.openAdvancedOrderDiscountDialog(order);
+        }
+    },
+
+    openAdvancedOrderDiscountDialog(order = this.getOrder()) {
+        const startingType = order.ff_order_discount_type === "fixed" ? "fixed" : "percent";
+        const startingValue = order.ff_order_discount_value || this.config.discount_pc || 0;
+        this.dialog.add(NumberPopup, {
+            title: _t("Order discount"),
+            startingValue,
+            startingType,
+            types: [
+                { name: "fixed", symbol: this.currency.symbol },
+                { name: "percent", symbol: "%" },
+            ],
+            getPayload: (num, type) => {
+                const value = this.parseValidFloat(num.toString());
+                this.applyDiscount(value, type, order);
+            },
+            formatDisplayedValue: (value, type) =>
+                type === "fixed"
+                    ? this.formatCurrency(this.parseValidFloat(String(value ?? "")))
+                    : `${value} %`,
+        });
+    },
+
     _ffValidateOrderDiscount(value, type, order) {
         const parsed = Number(value);
         if (!Number.isFinite(parsed) || parsed < 0) {

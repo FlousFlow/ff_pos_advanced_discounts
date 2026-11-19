@@ -13,7 +13,7 @@ patch(ProductScreen.prototype, {
         ) {
             this.numberBuffer.capture();
             this.numberBuffer.reset();
-            return this.pos.openAdvancedLineDiscountDialog(line);
+            return this.pos.openAdvancedDiscountScope(line, this.currentOrder);
         }
         return super.onNumpadClick(...arguments);
     },
